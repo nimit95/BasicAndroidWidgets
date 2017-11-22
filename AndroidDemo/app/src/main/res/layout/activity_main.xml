@@ -17,5 +17,22 @@
         android:id="@+id/tvSomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hey there" />
+        android:text="Hey there"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitXY"/>
 </LinearLayout>
