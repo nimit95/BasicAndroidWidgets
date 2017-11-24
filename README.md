@@ -1,15 +1,15 @@
 # Basic Android Widgets
 
-First lets get down at the real basics that ways in which we can interact with a program.
+First, let us get down to the basics of the ways in which we can interact with a computer program.
 
-One way is that the program gives instructions to the user and the user follows them to get desired output. Consider a C++ program which asks user for two amounts (have to be given for then program to proceed) and the program prints sum of the two. In such cases the control of flow depends in the program hence, it is called program driven approach.
+One way is that the program gives instructions to the user and the user follows them to get the desired output. Like in our C/C++ programs. Consider a C++ program which asks the user for two amounts(have to be given for the program to proceed) and the program prints sum of those two amounts. In such cases the control of flow depends on the program hence, it is called program-driven approach.
 
-Another way in which we generally use in our day to day life is that we see many options in program and the result depends on our selection. Like in any android App or website, the result depends on the action we perform, back button closes an app, clicking a button on screen might just open a new page. So, bascially the output is dependent on action/event, hence such tyoe of approach is called event driven.
+Another way in which we generally interact with the programs in our day to day life is that we see many options in the program and nothing happens until we perform any action. Like in an Android App or website, the result depends on the action we perform, back button closes an app, clicking a button on screen might just open a new page. So basically, the output is dependent on action/event, hence such type of approach is called event-driven.
 
-So can you guess wheather android apps are program driven or event driven?
-If your answer is event driven then you are right. Android Apps are event driven program. Generally, most GUI application are event driven, they give space to user to perform action.
+So can you guess whether Android apps are program driven or event driven?
+If your answer is event-driven then you are right. Android Apps are event-driven. Generally, most GUI applications are event-driven and perform an action after an event.
 
-As most of you would have used gui application, lets revise which type of UI elements are common and we can perform events on them.
+As most of us have used GUI application, let us revise types of UI elements that are common and we can perform events on them.
 
 * Buttons
 * TextView(View Text)
@@ -17,7 +17,8 @@ As most of you would have used gui application, lets revise which type of UI ele
 
 List can go on, there are many more.
 
-Now lets talk specifically about Android UI elements, also knowns as widgets. Each UI element you see on your Android Screen is a component of view Class that is the widget extends from View class , be it a Button, TextView etc. So, for example, a Button you see on your screen is defined in a class Button which extends from a class View in package android.widget.
+Each UI element you see on your Android Screen is a component of view Class that is it extends from class View, be it a Button, TextView etc.
+For example, a Button you see on your screen is defined in a class Button which extends from a class View in package android.widget.
 
 There are two ways to populate UI elements on the screen.
 * Your application can create UI elements (and manipulate their properties) programmatically at runtime.
@@ -52,12 +53,18 @@ There are some attributes which are common to each and every view defined in and
   * wrap_content means that the view wants to be just big enough to enclose its content (plus padding)
   * Custom size can be in any unit like sp, dp(density-independent pixel), px(pixel). But in Android, it preferred to use dp as the size is independent of the screen pixel and can remain constant on different screens.
 
-  **android:margin**
+  **android:margin** - Margin is the distance between parent element and the current element. It is given in dp. If only margin is used then all the four margins - marginTop, marginBottom, marginLeft, marginRight get the same vaue. These can be defined seperately as well.
 
-  **android:padding**
+  **android:padding** - Padding is the distance between the border and the content of the element. It is given in dp. If only margin is used then all the four paddings - paddingTop, paddingBottom, paddingLeft, paddingRight get the same vaue. These can be defined seperately as well.
 
 
-  Use of the above attributes will become more clear when we go through the  specific examples below.
+![](./img/download.jpeg)
+![](./img/mp2)
+
+Use of the above attributes will become more clear when we go through the specific examples.
+
+Some basic UI elements in Android, are known as Widgets and are defined in the package android.widget. These are explained below -
+
 
 #### Textview
 TextView is a widget in android to display plain text. TextView class directly inherits from View Class.
@@ -132,7 +139,8 @@ id for the above edit text is 'etName'. Its width is "match_parent" that is it w
 * **android:ems** - It specifies the maximum length of text that can be entered in the box. ems means the maximum count of 'm' that can be a fitted in the edit text and 'm' is used as it is the widest character.
 
 * **android:hint** - It is the hint that sometimes appears on the text area to help the aid the user and is gone when we click on the edit text.
-* **android:inputType** - It specifies the type of expected value in the text area. Like in this case it is name. In other cases it can be a number, password etc. These are predefined types provided by android.
+* **android:inputType** - It specifies the type of expected value in the text area. Like in this case, it is  'textPersonName'. In other cases, it can be a number, password etc. These are predefined types provided by android.
+
 
 #### ImageView
 Displays image resources, for example Bitmap or Drawable resources. ImageView is also commonly used to apply tints to an image and handle image scaling. ImageView directly extends View.
@@ -152,4 +160,4 @@ There are two attributes that we havent seen above -
 
 ![](./img/sc.png)
 
-In the due course we will keep kearning more tags and attributes.
+In the due course, we will keep learning more tags and attributes.
