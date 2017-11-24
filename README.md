@@ -2,9 +2,9 @@
 
 First, let us get down to the basics of the ways in which we can interact with a computer program.
 
-One way is that the program gives instructions to the user and the user follows them to get the desired output. Like in our C/C++ programs. Consider a C++ program which asks the user for two amounts(have to be given for the program to proceed) and the program prints sum of those two amounts. In such cases the control of flow depends on the program hence, it is called program-driven approach.
+One way is that a program gives instructions to an user and the user follows them to get the desired output. Like what usually happens in our C/C++ programs. Consider a C++ program which asks the user for two amounts(have to be given for the program to proceed), and as soon as numbers enterd the program prints sum of those two amounts. In such cases the control of flow depends on the program hence, it is called program-driven approach.
 
-Another way in which we generally interact with the programs in our day to day life is that we see many options in the program and nothing happens until we perform any action. Like in an Android App or website, the result depends on the action we perform, back button closes an app, clicking a button on screen might just open a new page. So basically, the output is dependent on action/event, hence such type of approach is called event-driven.
+Another way in which we generally interact with the programs in our day to day life is that we see many options in the program and nothing happens until we perform any action/event. Like in an Android App or website, the result depends on the action we perform, and when we perform it like back button closes an app, clicking a button on screen might just open a new page. So basically, the output is dependent on action/event, and control of flow depends on the user hence such type of approach is called event-driven.
 
 So can you guess whether Android apps are program driven or event driven?
 If your answer is event-driven then you are right. Android Apps are event-driven. Generally, most GUI applications are event-driven and perform an action after an event.
