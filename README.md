@@ -110,7 +110,7 @@ id for this TextView is 'tvSomeText'. Its height and width is wrap_content.
 
 #### EditText
 
-A user interface element for entering and modifying text.
+A user interface element for entering and modifying text. It also inherits from the TextView class.
 
 ```xml
 <EditText
@@ -129,11 +129,19 @@ id for the above edit text is 'etName'. Its width is "match_parent" that is it w
 * **android:inputType** - It specifies the type of expected value in the text area. Like in this case it is name. In other cases it can be a number, password etc. These are predefined types provided by android.
 
 #### ImageView
+Displays image resources, for example Bitmap or Drawable resources. ImageView is also commonly used to apply tints to an image and handle image scaling. ImageView directly extends View.
+
 
 ```xml
 <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@mipmap/ic_launcher"
         android:scaleType="fitXY"/>
 ````
+There are two attributes that we havent seen above -
+* **android:src** - It defines the location on the image in the resource folder, mipmap is a default folder which has a picture of default launcher icon with name 'ic_launcher', so the path is written as "@mipmap/ic_launcher". We can put images in drawable folder in res, then the path would become like "@drawable/pic_name"
+
+* **android:scaleType** - This is attribute specifies the scaling of a image inside the imageView. "fitXY" means image should fit into size 100dpX100dp
+
+In the due course we will keep kearning more tags and attributes.
