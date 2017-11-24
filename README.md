@@ -1,6 +1,23 @@
 # Basic Android Widgets
 
-Each UI element you see on your Android Screen is a component of view Class, be it a Button, TextView etc. So, for example, a Button you see on your screen is defined in a class Button which extends from a class View.
+First lets get down at the real basics that ways in which we can interact with a program.
+
+One way is that the program gives instructions to the user and the user follows them to get desired output. Consider a C++ program which asks user for two amounts (have to be given for then program to proceed) and the program prints sum of the two. In such cases the control of flow depends in the program hence, it is called program driven approach.
+
+Another way in which we generally use in our day to day life is that we see many options in program and the result depends on our selection. Like in any android App or website, the result depends on the action we perform, back button closes an app, clicking a button on screen might just open a new page. So, bascially the output is dependent on action/event, hence such tyoe of approach is called event driven.
+
+So can you guess wheather android apps are program driven or event driven?
+If your answer is event driven then you are right. Android Apps are event driven program. Generally, most GUI application are event driven, they give space to user to perform action.
+
+As most of you would have used gui application, lets revise which type of UI elements are common and we can perform events on them.
+
+* Buttons
+* TextView(View Text)
+* EditText(Fill in Text)
+
+List can go on, there are many more.
+
+Now lets talk specifically about Android UI elements, also knowns as widgets. Each UI element you see on your Android Screen is a component of view Class that is the widget extends from View class , be it a Button, TextView etc. So, for example, a Button you see on your screen is defined in a class Button which extends from a class View in package android.widget.
 
 There are two ways to populate UI elements on the screen.
 * Your application can create UI elements (and manipulate their properties) programmatically at runtime.
@@ -37,10 +54,34 @@ There are some attributes which are common to each and every view defined in and
 
   Use of the above attributes will become more clear when we go through specific examples below.
 
+#### Textview
+TextView is a widget in android to display plain text. TextView class directly inherits from View Class.
+
+```xml
+<TextView
+        android:id="@+id/tvSomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hey there"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+```
+
+id for this TextView is 'tvSomeText'. Its height and width is wrap_content.
+* **android:text** - This attribute defines the text inside a TextView.
+
+* **android:textColor** - This attribute is for the color of the text. We can provide hex values like "#ffffff" or we can reference to color defined in color.xml like "@color/black" or we can use some default colors defined in android OS like "@android:color/black"
+
+* **android:textSize** - It specifies the text size. It is generally defined is sp. sp stands for scalable-independent pixel. These are like dp but are affected by the font sizes defined by users in phone settings.
+
+* **android:text** - Android provides three text styles by default normal, italics and bold.
+
+
 
   #### Button
 
-  A user interface element the user can tap or click to perform an action.
+  A user interface element the user can tap or click to perform an action. Button class is child class of TextView.
 
   To display a button in an activity, add a button to the activity's layout XML file:
 
@@ -54,7 +95,7 @@ There are some attributes which are common to each and every view defined in and
 
   id of the above declared button in XML is 'btnSubmit'. We can reference this button in our code using findViewById(R.id.btnSubmit)
 
-  Height and width of the button is wrap content.
+  Height and width of the button is wrap content. TextView being its parent class, all the TextView attributes work on button as well.
 
   * android:text
 
@@ -66,21 +107,10 @@ There are some attributes which are common to each and every view defined in and
   Button with width 'match_parent'
   ![](./img/btn2.png)
 
-#### Textview
-TextView is a widget in android to display plain text.
-
-```xml
-<TextView
-        android:id="@+id/tvSomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hey there"
-        android:textColor="@android:color/black"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-```
 
 #### EditText
+
+A user interface element for entering and modifying text.
 
 ```xml
 <EditText
@@ -91,6 +121,13 @@ TextView is a widget in android to display plain text.
       android:hint="Name"
       android:inputType="textPersonName" />
 ```
+
+id for the above edit text is 'etName'. Its width is "match_parent" that is it would take width of it parent layout, height is "wrap_content".
+
+* **android:ems** - It specifies the maximum length of text that can be entered in the box. ems means the maximum count of 'm' that can be a fitted in the edit text and 'm' is used as it is the widest character.
+
+* **android:inputType** - It specifies the type of expected value in the text area. Like in this case it is name. In other cases it can be a number, password etc. These are predefined types provided by android.
+
 #### ImageView
 
 ```xml
