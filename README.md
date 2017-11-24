@@ -52,7 +52,12 @@ There are some attributes which are common to each and every view defined in and
   * wrap_content means that the view wants to be just big enough to enclose its content (plus padding)
   * Custom size can be in any unit like sp, dp(density-independent pixel), px(pixel). But in Android, it preferred to use dp as the size is independent of the screen pixel and can remain constant on different screens.
 
-  Use of the above attributes will become more clear when we go through specific examples below.
+  **android:margin**
+
+  **android:padding**
+
+
+  Use of the above attributes will become more clear when we go through the  specific examples below.
 
 #### Textview
 TextView is a widget in android to display plain text. TextView class directly inherits from View Class.
@@ -126,6 +131,7 @@ id for the above edit text is 'etName'. Its width is "match_parent" that is it w
 
 * **android:ems** - It specifies the maximum length of text that can be entered in the box. ems means the maximum count of 'm' that can be a fitted in the edit text and 'm' is used as it is the widest character.
 
+* **android:hint** - It is the hint that sometimes appears on the text area to help the aid the user and is gone when we click on the edit text.
 * **android:inputType** - It specifies the type of expected value in the text area. Like in this case it is name. In other cases it can be a number, password etc. These are predefined types provided by android.
 
 #### ImageView
@@ -143,5 +149,7 @@ There are two attributes that we havent seen above -
 * **android:src** - It defines the location on the image in the resource folder, mipmap is a default folder which has a picture of default launcher icon with name 'ic_launcher', so the path is written as "@mipmap/ic_launcher". We can put images in drawable folder in res, then the path would become like "@drawable/pic_name"
 
 * **android:scaleType** - This is attribute specifies the scaling of a image inside the imageView. "fitXY" means image should fit into size 100dpX100dp
+
+![](./img/sc.png)
 
 In the due course we will keep kearning more tags and attributes.
